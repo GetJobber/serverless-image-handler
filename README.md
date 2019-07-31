@@ -50,6 +50,12 @@ aws s3 cp ./dist/ s3://jobber-development-harriswong-lambda-us-east-1/serverless
 aws s3 cp ./dist/serverless-image-handler.template s3://jobber-development-harriswong-lambda/serverless-image-handler/v4.0.0/
 ```
 
+## Deploying to dev environment
+Deploy `./dist/serverless-image-handler.template` to CloudFormation with the following
+```
+aws cloudformation deploy --template-file serverless-image-handler.template --stack-name ServerlessImageHandler --no-execute-changeset --region=us-east-1 --parameter-overrides CorsEnabled='Yes' CorsOrig='*' SourceBuckets='jobber\-development\-.*' LambdaLogRetentionPeriod=30 DeployDemoUI='No' --capabilities CAPABILITY_NAMED_IAM
+```
+
 
 # ------ Below are the original AWS doc -------
 
