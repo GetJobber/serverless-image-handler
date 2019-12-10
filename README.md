@@ -6,7 +6,7 @@ This custom build is created to address these 2 problems
 ## Building a custom image
 ```
 docker build -t serverless-image-handler .  # this builds the image
-docker run -i -t serverless-image-handler /bin/bash.  # this starts a container using above image, and /bin/bash into it.
+docker run -i -t serverless-image-handler /bin/bash  # this starts a container using above image, and /bin/bash into it.
 ```
 
 Once you are in the container, run the build script to generate a .zip package.
