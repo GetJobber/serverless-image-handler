@@ -36,6 +36,12 @@ To extract files form a docker container, you can do the following, this copies 
 ```
 docker cp <docker_container_id>:/tmp/deployment/dist .
 ```
+You can find container id with this command.
+```
+docker ps
+```
+Find the container ID of image `serverless-image-handler`.
+
 ie. for container ID `c376c5a86485`
 ```
 docker cp c376c5a86485:/tmp/deployment/dist .
