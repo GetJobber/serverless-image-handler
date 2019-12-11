@@ -6,7 +6,7 @@ This custom build is created to address these 2 problems
 ## Building a custom image
 ```
 docker build -t serverless-image-handler .  # this builds the image
-docker run -i -t serverless-image-handler /bin/bash.  # this starts a container using above image, and /bin/bash into it.
+docker run -i -t serverless-image-handler /bin/bash  # this starts a container using above image, and /bin/bash into it.
 ```
 
 Once you are in the container, run the build script to generate a .zip package.
@@ -36,6 +36,12 @@ To extract files form a docker container, you can do the following, this copies 
 ```
 docker cp <docker_container_id>:/tmp/deployment/dist .
 ```
+You can find container id with this command.
+```
+docker ps
+```
+Find the container ID of image `serverless-image-handler`.
+
 ie. for container ID `c376c5a86485`
 ```
 docker cp c376c5a86485:/tmp/deployment/dist .
