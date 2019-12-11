@@ -6,8 +6,8 @@ yum install -y nodejs
 
 WORKDIR /tmp
 ENV WORKDIR /tmp
-ENV TEMPLATE_OUTPUT_BUCKET jobber-development-harriswong-lambda
-ENV DIST_OUTPUT_BUCKET jobber-development-harriswong-lambda
+ENV TEMPLATE_OUTPUT_BUCKET jobber-serverless-image-handler
+ENV DIST_OUTPUT_BUCKET jobber-serverless-image-handler
 ENV VERSION v4.0.0
 
 COPY . .
