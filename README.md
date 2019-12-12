@@ -52,8 +52,8 @@ Uploads to 2 buckets, `jobber-development-harriswong-lambda-us-east-1` and `jobb
 `jobber-development-harriswong-lambda` stores the template
 `jobber-development-harriswong-lambda-us-east-1` stores the `.zip` which is what the lambda server uses.
 ```
-aws s3 cp ./dist/ s3://jobber-development-harriswong-lambda-us-east-1/serverless-image-handler/v4.0.0/ --recursive --exclude "*" --include "*.zip"
-aws s3 cp ./dist/serverless-image-handler.template s3://jobber-development-harriswong-lambda/serverless-image-handler/v4.0.0/
+aws s3 cp ./dist/ s3://jobber-serverless-image-handler-us-east-1/serverless-image-handler/v4.0.0/ --recursive --exclude "*" --include "*.zip"
+aws s3 cp ./dist/serverless-image-handler.template s3://jobber-serverless-image-handler/serverless-image-handler/v4.0.0/
 ```
 
 ## Deploying to dev environment
